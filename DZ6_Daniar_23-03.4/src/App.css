@@ -1,0 +1,93 @@
+@import './theme/dark.css';
+@import './theme/light.css';
+
+:root {
+    --text-color: #333333;
+    --background-color: #F7F7F7;
+    --border-color: #BEBEBE;
+}
+
+body[data-theme="dark"] {
+    --text-color: #F7F7F7;
+    --background-color: #333333;
+    --border-color: #9f1717;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pokemonCard {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.pokemonCard:hover {
+    filter: contrast(1.2);
+    transform: scale(1.02);
+}
+
+.pokemonCard > img {
+    width: 150px;
+    height: 150px;
+}
+
+.pokemonList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 60px 0;
+}
+
+.themeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background: none;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    transition: 200ms;
+}
+
+.themeBtn:hover {
+    transform: translateY(3px);
+}
+
+.pokemonName {
+    font-size: 30px;
+    text-align: center;
+}
+
+.pokemonName:first-letter {
+    text-transform: uppercase;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+}
